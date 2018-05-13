@@ -1,0 +1,32 @@
+{
+  "exchanges_unencrypted": [
+    {
+      "exchange": "binance",
+      "apiKey": "XXXXXXXXXXXXXXXXXXXXXXXXX",
+      "apiSecret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "paris": [
+        {
+          "currency":"BTC/USDT",
+          "amount": 10 
+        },
+        {
+          "currency":"ETH/USDT",
+          "amount": 10 
+        }
+      ]
+    },
+    {
+      "exchange": "gate.io",
+      "apiKey": "XXXXXXXXXXXXXXXXXXXXXXXXX",
+      "apiSecret": "XXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+      "paris": [
+        {
+          "currency":"NAS/USDT",
+          "amount": 10 
+        }
+      ]
+    }
+  ]
+}
+
+
