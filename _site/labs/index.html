@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="bookmark" href="/favicon.ico"/>
+
+  </head>
+  <body>
+    <aside class="logo">
+  <h1 class="avatar">量化小助手</h1>
+  <ul>
+    
+    <li><a href="/">返回首页</a></li>
+    
+  </ul>
+</aside>
+
+    <main>
+      <article class="typo">
+  <h1>接口文档</h1>
+  <h1 id="trading-robot">Trading Robot</h1>
+
+<p>基本架构。</p>
+
+<p>策略相关的文件都放在 strategy 里面。<br />
+bot 是一个机器人的 wrapper，每一个策略由一个 bot 来维护。</p>
+
+<h2 id="usage">Usage</h2>
+
+<p>1.编辑配置文件</p>
+
+<p>invest-example.json</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>
+    "exchange": "binance",
+    "paris": [
+      {
+        currency:"BTC/USDT",
+        amount: 10 
+      }
+    ]
+  },
+  {
+    "exchange": "bittrex",
+  },
+  ],
+}
+</code></pre>
+</div>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ ./invest.js invest.json 
+</code></pre>
+</div>
+
+<h2 id="ccxt-">CCXT 的文档</h2>
+
+<p>fetchTickers()<br />
+  fetchOpenOrders()<br />
+  createOrder()<br />
+  cancelOrder()<br />
+  fetchBalance()</p>
+
+<p>Config Files:</p>
+
+<p>```</p>
+
+<p>{<br />
+  “exchanges_unencrypted”: [<br />
+  {<br />
+    “exchange”: “binance”,<br />
+      “apiKey”: “XXXXXXXXXXXXXXXXXXXXXXXXX”,<br />
+      “apiSecret”: “XXXXXXXXXXXXXXXXXXXXXXXXXXXX”<br />
+  },<br />
+  {<br />
+    “exchange”: “bittrex”,<br />
+    “inactive”: 1,<br />
+    “apiKey”: “XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX”,<br />
+    “apiSecret”: “XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX”<br />
+  },<br />
+  ],<br />
+  “exchange_for_fiat”: “okcoinusd”<br />
+}<br />
+```<br />
+架构：</p>
+
+<p>MVC</p>
+
+<p>Task Controller -&gt;</p>
+
+<h1 id="todo">TODO:</h1>
+
+<ul>
+  <li>command-line-args</li>
+  <li>command-line-usage<br />
+[ ] 初始化项目<br />
+[ ] 查看 ccxt 的文档。<br />
+[ ] 列一个工作计划</li>
+</ul>
+
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 自适应高反差黑色 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9798300025848807"
+     data-ad-slot="8607007877"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</article>
+<a href="/">返回首页</a>
+    </main>
+    
+    <div class="footer">
+  <a href="https://github.com/martinchenczj/investbot">量化小助手</a> &copy; 2009 - 2018 /  
+  <a href="https://github.com/wildflame/wildflame.github.io" target="_blank">Github</a> - 
+  <p>
+    本站内容采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+  </p>
+</div>
+
+
+  </body>
+</html>

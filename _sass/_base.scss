@@ -1,0 +1,218 @@
+body {
+    padding: 20px;
+    margin: 0;
+
+    @media (min-width: 992px) {
+        padding: 35px 50px;
+    }
+
+}
+
+code {
+    border-radius: 3px;
+    background: #f5f5f5;
+    padding: 2px 6px;
+}
+
+pre code {
+    border-radius: 0;
+    background: none;
+    padding: 0;
+}
+
+.highlighter-rouge {
+    font-size: 0.8rem;
+    pre {
+        overflow: auto;
+    }
+}
+
+table {
+    font-size: 0.75rem;
+}
+
+.note {
+    background: #fff;
+    box-shadow: 0px 0px 8px rgba( 0, 0, 0, 0.2 );
+    padding: 20px 20px 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transition-property: transform;
+    transition-duration: 0.6s;
+    transition-timing-function: ease;
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 0.6s;
+    -webkit-transition-timing-function: ease;
+    transform: translateY( calc( 100% + 8px ) );
+    -webkit-transform: translateY( calc( 100% + 8px ) );
+    font-size: 14px;
+    line-height: 1.7em;
+    width: 100%;
+    box-sizing: border-box;
+
+    &.shown {
+        transform: translateY( 0 );
+        -webkit-transform: translateY( 0 );
+    }
+
+    @media (min-width: 768px) {
+        right: 40px;
+        padding-bottom: 20px;
+        max-width: 400px;
+        left: auto;
+        bottom: 40px;
+        border-radius: 8px;
+        transition-property: opacity, transform;
+        -webkit-transition-property: opacity, -webkit-transform;
+        transition-duration: 0.3s;
+        -webkit-transition-duration: 0.3s;
+        opacity: 0;
+        transform: scale( 0.1 ) translateZ( 0 );
+        -webkit-transform: scale( 0.1 ) translateZ( 0 );
+
+        &.shown {
+            transform: scale( 1 ) translateZ( 0 );
+            -webkit-transform: scale( 1 ) translateZ( 0 );
+            opacity: 1;
+        }
+
+    }
+
+}
+
+.logo {
+    margin: 0 0 1rem 0;
+    text-align: left;
+
+    .avatar {
+        background: url('/assets/image/2c9bde284084b400de2d603467bab71c.jpg') 0 0 no-repeat;
+        background-size: 100% 100%;
+        color: #fff;
+        text-decoration: none;
+        text-transform: lowercase;
+        font-weight: 700;
+        height: 60px;
+        width: 60px;
+        font-size: 1.5em;
+        border-radius: 75px;
+        display: inline-block;
+        text-align: center;
+        text-indent: -999em;
+        line-height: 75px;
+    }
+
+    ul {
+        display: inline-block;
+        margin: 0 0 0 .5rem;
+
+        li {
+            display: inline-block;
+            padding: 0 .4rem;
+        }
+    }
+
+    @media (min-width: 992px) {
+        position: fixed;
+        top: 50px;
+        right: 50px;
+        margin: 0;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+        -webkit-animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+
+        .avatar {
+            transition: transform 0.4s;
+            -webkit-transition: -webkit-transform 0.4s;
+            box-sizing: border-box;
+            line-height: 80px;
+            height: 80px;
+            width: 80px;
+            border-radius: 80px;
+
+            &:hover {
+                transform: scale( 1.2 );
+                -webkit-transform: scale( 1.2 );
+            }
+
+        }
+
+        ul {
+            display: block;
+            margin: 1rem 0 0 .2rem;
+
+            li {
+                display: block;
+            }
+        }
+
+    }
+
+}
+
+article {
+    max-width: 1024px;
+
+    .footnote {
+        border: 0;
+    }
+
+    .footnotes {
+        margin: 40px 0;
+
+        .reversefootnote {
+            border: 0;
+        }
+
+    }
+
+}
+
+article.home {
+
+    ul {
+
+        li {
+            margin: 10px 0;
+
+            a {
+                color: #000;
+                display: inline-block;
+                box-sizing: border-box;
+            }
+
+            small {
+                font-size: 0.8rem;
+                display: block;
+
+                span {
+                    display: none;
+                }
+            }
+
+            @media (min-width: 768px) {
+                small {
+                    display: inline;
+
+                    span {
+                        padding: 0 .5rem;
+                        display: inline;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+.footer {
+    margin-top: 2rem;
+    font-size: 12px;
+    color: #ccc;
+
+    a {
+        color: #ccc;
+    }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>量化小助手</title>
+    <description>用来帮助你量化的机器人</description>
+    <link>https://github.com/martinchenczj/investbot/</link>
+    <atom:link href="https://github.com/martinchenczj/investbot/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sun, 27 May 2018 19:56:53 +0800</pubDate>
+    <lastBuildDate>Sun, 27 May 2018 19:56:53 +0800</lastBuildDate>
+    <generator>Jekyll v3.0.1</generator>
+    
+  </channel>
+</rss>
