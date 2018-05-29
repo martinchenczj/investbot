@@ -1,15 +1,29 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="bookmark" href="/favicon.ico"/>
 
-<article class="typo home">
+  </head>
+  <body>
+    <aside class="logo">
+  <h1 class="avatar">量化小助手</h1>
+  <ul>
+    
+    <li><a href="/">量化小助手</a></li>
+    
+  </ul>
+</aside>
+
+    <main>
+      <article class="typo home">
   <h1>日志</h1>
   <ul>
-    {% for post in site.posts %}
-    <li data-tags="{{ post.tags | jsonify | cgi_escape}}">
-      <a href="{{ post.url }}">{{ post.title }}</a><small><span>-</span>{{ post.date | date: '%Y年%m月%d日' }}</small>
-    </li>
-    {% endfor %}
+    
   </ul>
   <h1>关于我</h1>
   <p>用来帮助你量化的机器人</p>
@@ -19,3 +33,17 @@ layout: default
     <li><a href="/labs">接口文档</a></li>
   </ul>
 </article>
+
+    </main>
+    
+    <div class="footer">
+  <a href="">量化小助手</a> &copy; 2009 - 2018 /  
+  <a href="" target="_blank">Github</a> - 
+  <p>
+    本站内容采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+  </p>
+</div>
+
+
+  </body>
+</html>

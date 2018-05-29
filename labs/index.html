@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="stylesheet" href="/css/main.css">
+<link rel="shortcut icon" href="/favicon.ico"/>
+<link rel="bookmark" href="/favicon.ico"/>
+
+  </head>
+  <body>
+    <aside class="logo">
+  <h1 class="avatar">量化小助手</h1>
+  <ul>
+    
+    <li><a href="/">返回首页</a></li>
+    
+  </ul>
+</aside>
+
+    <main>
+      <article class="typo">
+  <h1>接口文档</h1>
+  <p>最新接口以<a href="https://github.com/martinchenczj/investbot/wiki/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3">wiki - 接口文档</a>为准。</p>
+
+<h1 id="api">API接口</h1>
+
+<h2 id="section">基本信息</h2>
+
+<h4 id="request">Request</h4>
+<ul>
+  <li>Method: <strong>GET</strong></li>
+  <li>URL:  <code class="highlighter-rouge">/info</code></li>
+  <li>Headers：</li>
+  <li>Body:</li>
+</ul>
+
+<h4 id="response">Response</h4>
+<ul>
+  <li>
+    <p>Body
+<code class="highlighter-rouge"><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nt">"name"</span><span class="w"> </span><span class="p">:</span><span class="s2">"定投机器人"</span><span class="p">,</span><span class="w">
+      </span><span class="nt">"createdDate"</span><span class="w"> </span><span class="p">:</span><span class="w"> 
+      </span><span class="err">...</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></p>
+  </li>
+  <li>机器人名称：name</li>
+  <li>创建日期：createdDate</li>
+  <li>状态：status</li>
+  <li>托管地址：location</li>
+  <li>交易平台: exchanges</li>
+</ul>
+
+<h2 id="section-1">日志</h2>
+
+<h3 id="logstatus">获取LogStatus</h3>
+
+<h3 id="section-2">参数</h3>
+
+<ul>
+  <li>如果不指定参数会同时返回两种不同的类型。</li>
+  <li>type:<code class="highlighter-rouge">type</code>
+    <ul>
+      <li>type 有两种: <code class="highlighter-rouge">table</code>, <code class="highlighter-rouge">message</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="request-1">Request</h4>
+<ul>
+  <li>Method: <strong>GET</strong></li>
+  <li>URL:  <code class="highlighter-rouge">/logStatus?type="{type}"</code></li>
+  <li>Headers：</li>
+  <li>Body:</li>
+</ul>
+
+<h4 id="response-1">Response</h4>
+<ul>
+  <li>Body
+<code class="highlighter-rouge"><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nt">"data"</span><span class="p">:[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"message"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"status"</span><span class="p">:</span><span class="s2">"Current status is like this"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+          </span><span class="nt">"type"</span><span class="p">:</span><span class="s2">"table"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"title"</span><span class="p">:</span><span class="s2">"持仓信息"</span><span class="p">,</span><span class="w">
+          </span><span class="nt">"cols"</span><span class="p">:[</span><span class="w">
+              </span><span class="s2">"列1"</span><span class="p">,</span><span class="w">
+              </span><span class="s2">"列2"</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="nt">"rows"</span><span class="p">:[</span><span class="w">
+              </span><span class="p">[</span><span class="w">
+                  </span><span class="s2">"abc"</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"def"</span><span class="w">
+              </span><span class="p">],</span><span class="w">
+              </span><span class="p">[</span><span class="w">
+                  </span><span class="s2">"ABC"</span><span class="p">,</span><span class="w">
+                  </span><span class="s2">"support color #ff0000"</span><span class="w">
+              </span><span class="p">]</span><span class="w">
+          </span><span class="p">]</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></li>
+</ul>
+
+<h3 id="log">获取Log</h3>
+
+<h3 id="section-3">参数</h3>
+
+<ul>
+  <li>limit: 最多 100 条，默认100条。</li>
+  <li>offset: 默认是0</li>
+</ul>
+
+<h4 id="request-2">Request</h4>
+<ul>
+  <li>Method: <strong>GET</strong></li>
+  <li>URL:  <code class="highlighter-rouge">/log?offset={offset}&amp;limit={limit}</code></li>
+  <li>Headers：</li>
+  <li>Body:</li>
+</ul>
+
+<h4 id="response-2">Response</h4>
+<ul>
+  <li>Body
+<code class="highlighter-rouge"><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="err">type:</span><span class="w"> </span><span class="nt">"error"</span><span class="err">,</span><span class="w"> </span><span class="err">message</span><span class="p">:</span><span class="w"> </span><span class="s2">"error message"</span><span class="p">},</span><span class="err">...</span><span class="p">,{</span><span class="err">type:</span><span class="w"> </span><span class="nt">"normal"</span><span class="err">,</span><span class="w"> </span><span class="err">message</span><span class="p">:</span><span class="s2">"normal"</span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></li>
+</ul>
+
+<h3 id="logprofit">获取LogProfit</h3>
+
+<h3 id="section-4">参数</h3>
+
+<p>limit: 最多 100 条，默认100条。
+offset: 默认是0</p>
+
+<h4 id="request-3">Request</h4>
+<ul>
+  <li>Method: <strong>GET</strong></li>
+  <li>URL:  <code class="highlighter-rouge">/logProfit?offset={offset}&amp;limit={limit}</code></li>
+  <li>Headers：</li>
+  <li>Body:</li>
+</ul>
+
+<h4 id="response-3">Response</h4>
+<ul>
+  <li>Body
+<code class="highlighter-rouge"><span class="w">
+</span><span class="p">{</span><span class="w">
+</span><span class="nt">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="mi">98</span><span class="p">,</span><span class="mi">97</span><span class="p">,</span><span class="err">...</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></li>
+</ul>
+
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 自适应高反差黑色 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9798300025848807"
+     data-ad-slot="8607007877"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</article>
+<a href="/">返回首页</a>
+    </main>
+    
+    <div class="footer">
+  <a href="">量化小助手</a> &copy; 2009 - 2018 /  
+  <a href="" target="_blank">Github</a> - 
+  <p>
+    本站内容采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可
+  </p>
+</div>
+
+
+  </body>
+</html>
